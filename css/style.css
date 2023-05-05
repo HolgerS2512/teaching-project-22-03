@@ -1,0 +1,500 @@
+:root {
+    --clr: rgb(57, 192, 163);
+    --clr-hov: rgb(57 192 163 / 50%);
+    --txt-clr: rgb(22, 22, 22);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 500;
+    color: var(--txt-clr);
+}
+html {
+    height: 100vh;
+    width: 100%;
+    font-size: 100%;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background: #fff;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background: -webkit-radial-gradient(at right top, var(--clr-hov) 0, #fff 35%);
+    background: -moz-radial-gradient(at right top, var(--clr-hov) 0, #fff 35%);
+    background: -o-radial-gradient(at right top, var(--clr-hov) 0, #fff 35%);
+    background: radial-gradient(at right top, var(--clr-hov) 0, #fff 35%);
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    background: transparent;
+}
+nav {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0 0 0 / 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+nav > ul {
+    width: 100%;
+    height: min-content;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 49px;
+    padding: 30px 0;
+    background-color: #fff;
+    box-shadow:inset 0 0 2px rgba(0 0 0 / 20%);
+}
+nav > ul.active {
+    display: flex;
+}
+nav > ul > li {
+    width: min-content;
+    height: min-content;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav > ul > li > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: max-content;
+    height: max-content;
+    font-weight: 500;
+    padding: 2vh 0;
+    margin: 1vh 0;
+}
+nav > ul > li > a.active {
+    color: var(--clr);
+    border-bottom: 2px solid var(--clr);
+}
+nav > ul > li > a:hover {
+    color: var(--clr-hov);
+    -webkit-transition: .25s;
+    -ms-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+}
+nav > ul > li > input {
+    border-radius: 60px;
+    padding: .65rem;
+    outline: none;
+    border: 1px solid gray;
+    width: 180px;
+    background: rgba(255 255 255 / 30%);
+    color: #000;
+}
+header {
+    position: relative;
+    min-width: 100%;
+    margin-top: 50px;
+}
+div.header {
+    background: url(../img/dog-g0b200f3be_1920.jpg) no-repeat;
+
+    /* background-size: contain --> gesamtes Bild COVER --> Anpassung; */
+    /* background-position: left top; --> default value --> Center kann sinnvoll sein*/
+    height: 100vh; /* Fluide Maßeinheit --- keine height auto erlaubt!*/
+}
+h1 {
+    position: absolute;
+    top: 20%;
+    right: 17%;
+    background: rgba(255 255 255 / 35%);
+    padding: 1rem 1.5rem;
+    font-size: 2.25em;
+    border-radius: 2px;
+    font-weight: 700;
+    color: var(--clr);
+}
+h2,
+h3,
+h4 {
+    color: var(--clr);
+    text-align: center;
+}
+h2 {
+    font-size: 1.85em;
+}
+h3 {
+    font-size: 1.35em;
+}
+.headline-box {
+    min-height: 70px;
+    height: 70px;
+    width: 100%;
+}
+header figure {
+    width: 100%;
+    max-height: calc(100vh - 50px);
+    min-height: min-content;
+    overflow: hidden;
+}
+figure {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    border: none;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover;
+    object-fit: cover;
+}
+main {
+    padding: 4rem 0 0 0;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-break {
+    flex-direction: column;
+}
+.flex-break-res {
+    flex-direction: column-reverse;
+}
+.sec-zero {
+    border: 2px solid gray;
+    flex-direction: column;
+}
+.sec-zero div {
+    width: 100%;
+    height: 100%;
+}
+.sec-zero div img {
+    width: 60%;
+    height: auto;
+    padding: .75rem;
+}
+.sec-zero div div {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid gray;
+}
+.sec-zero ul {
+    width: 100%;
+    height: 100%;
+    padding: .5rem .5rem .5rem 3rem;
+}
+.sec-zero li {
+    margin: .5rem 0;
+}
+.sec-zero a {
+    text-decoration: none;
+}
+.line100 {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    border: none;
+}
+.extra-line {
+    border: none;
+    width: 40%;
+    height: 3px;
+    background-color: var(--clr);
+}
+.gutter {
+    padding: 1rem;
+}
+.sec-one {
+    margin-top: 2.5rem;
+    padding-bottom: 10rem;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-left: 2px solid gray;
+    flex-direction: column;
+}
+.h,
+.news {
+    width: 100%;
+    height: 100%;
+}
+.news form,
+.img-box {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.img-box {
+    border-bottom: 2px solid gray;
+    padding: 2rem;
+}
+.img-box img {
+    max-width: 700px;
+}
+fieldset {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: none;
+}
+fieldset input {
+    margin: .5rem 0;
+    padding: 1.35rem 20px;
+    border-radius: 80px;
+    outline: none;
+    border: 1px solid gray;
+}
+fieldset .btn-dotted {
+    margin: 1.65rem auto 0 auto;
+    width: 40%;
+    font-size: 1.15em;
+}
+#checkbox {
+    margin: 6px 20px;
+}
+.btn-dotted {
+    text-decoration: none;
+    border-top: 2px solid var(--clr);
+    border-right: 2px solid var(--clr);
+    border-bottom: 2px solid var(--clr);
+    border-left: 2px dotted var(--clr);
+    margin-top: 30px;
+    padding: 1em 2em;
+    border-radius: 80px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-dotted:hover {
+    background-color: var(--clr-hov);
+    -webkit-transition: .15s;
+    -ms-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    transition: .15s;
+    -webkit-transform: scale(1.035);
+    -ms-transform: scale(1.035);
+    -moz-transform: scale(1.035);
+    -o-transform: scale(1.035);
+    transform: scale(1.035);
+}
+footer {
+    background-color: rgb(87, 87, 87);
+    width: 100%;
+    min-height: 320px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 -10px 10px 2px #00000069;
+}
+footer p {
+    color: #fff;
+    font-weight: 300;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+footer div {
+    display: flex;
+}
+
+footer div ul li {
+    list-style: none;
+    padding: .65rem 0;
+}
+.fo-head {
+    margin: .2rem 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.fo-head span {
+    color: #fff;
+}
+footer div ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: .2rem 0;
+    white-space: nowrap;
+}
+footer div ul li a:hover {
+    color: var(--clr-hov);
+    text-decoration: underline;
+}
+.arrow {
+    min-width: 50px;
+    width: 50px;
+    min-height: 50px;
+    height: 50px;
+    font-size: 30px;
+    background: #fff;
+    border-radius: 100%;
+    border: 2px solid gray;
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.arrow:hover {
+    background-color: var(--clr-hov);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.arrow:hover a {
+    color: #fff;
+}
+.arrow a {
+    text-decoration: none;
+    position: relative;
+    top: -5px;
+}
+.arrow,
+footer div ul li a {
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.accent {
+    color: var(--clr);
+    border-bottom: 2px solid var(--clr);
+}
+.accent:hover {
+    text-decoration: unset;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(77, 77, 77);
+    outline: 5px solid transparent;
+    border: 5px solid transparent;
+}
+@media (max-width:979px) {
+    #menu {
+        height: 42px;
+        width: 52px;
+        border-radius: 4px;
+        border: 1px solid gray;
+        position: absolute;
+        right: 8px;
+        top: 4px;
+        z-index: 99999;
+        padding: 4px 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #menu span {
+        height: 3px;
+        width: 100%;
+        border-radius: 6px;
+        background: rgb(83, 83, 83);
+    }
+}
+@media (min-width:576px) {
+    .sec-zero div img {
+        width: 35%;
+    }
+}
+@media (min-width:980px) {
+    nav {
+        background: rgba(255 255 255 / 75%);
+    }
+    #none {
+        margin-left: unset;
+        padding-left: unset;
+    }
+    nav > ul {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    nav > ul > li {
+        flex-direction: row;
+    }
+    nav > ul > li > a {
+        padding: .35rem .5rem;
+        margin: 0 1rem;
+    }
+    .flex-break-res,
+    .flex-break {
+        flex-direction: row;
+    }
+    h1 {font-size: 3.25em;}
+    h2 {font-size: 3em;}
+    h3 {font-size: 2em;}
+    header,
+    .wrapper {
+        width: 75%;
+    }
+    .sec-zero div img {
+        padding: 4rem;
+    }
+    .sec-zero div div {
+        border-top: none;
+        border-left: 2px solid gray;
+        width: 65%;
+    }
+    .sec-zero ul {
+        padding: 1rem .5rem 1rem 4rem;
+    }
+    .news form,
+    .img-box {
+        width: 50%;
+    }
+    .img-box {
+        border-bottom: none;
+        border-left: 2px solid gray;
+    }
+    .h,
+    .news {
+        height: 400px;
+    }
+    footer {
+        padding: 0 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer div ul {
+        margin-right: 90px;
+    }
+    footer p {
+        left: 10px;
+        right: unset;
+    }
+}
+@media (min-width:1480px) {
+    header,
+    .wrapper {
+    width: 50%;
+    max-width: 1480px;
+    }
+}
